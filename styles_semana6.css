@@ -1,0 +1,83 @@
+:root {
+    --error-color: #ff4d4d;
+    --success-color: #2ecc71;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; /* Crucial para que el padding no rompa el ancho */
+    transition: border-color 0.3s;
+}
+
+/* Clases de validación dinámica */
+input.invalid {
+    border-color: var(--error-color);
+}
+
+input.valid {
+    border-color: var(--success-color);
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    height: 1rem; /* Reserva espacio para que el layout no "salte" */
+    display: block;
+    margin-top: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#submitBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+#resetBtn {
+    background-color: #e74c3c;
+    color: white;
+}
